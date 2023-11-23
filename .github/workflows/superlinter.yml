@@ -1,4 +1,4 @@
-name: Super-linter
+name: My Workflow
 
 on:
   push:
@@ -6,16 +6,10 @@ on:
       - '*'
 
 jobs:
-  super-lint:
-    name: Lint code base
+  my-job:
+    name: My Job
     runs-on: ubuntu-latest
-   
+  
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Run Super-Linter
-        uses: github/super-linter@v3
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
